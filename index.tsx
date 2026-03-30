@@ -1,0 +1,41 @@
+import { Input } from "@/components/input";
+import { Image, StyleSheet, Text, View } from "react-native";
+export default function index() {
+    return (
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <Image
+                source={require("/home/escola/my-app/src/assets/download.jpeg")}
+                style={styles.illustration}
+            />
+            <Text style={styles.title}>Programação Mobile</Text>
+            <Text style={styles.subtitle}>acesse sua conta</Text>
+            <View style={styles.form}>
+                <Input placeholder="E-mail" />
+                <Input placeholder="Senha" />
+            </View>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "#FDFDFD",
+        padding: 32,
+    },
+    title: {
+        fontSize: 30,
+        fontWeight: "bold",
+    },
+    subtitle: {
+        fontSize: 18,
+    },
+    form: {
+        marginTop: 30,
+        gap: 24,
+    },
+    illustration: {
+        width: "25%",
+        height: 300,
+    },
+
+});
