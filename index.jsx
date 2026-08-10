@@ -2,6 +2,7 @@ import { Button } from "@/components/button";
 import { Input } from "@/components/input";
 import { Link } from "expo-router";
 import {
+    Alert,
     Image,
     KeyboardAvoidingView,
     Platform,
@@ -11,6 +12,9 @@ import {
     View
 } from "react-native";
 export default function Index() {
+    function handleSignIn() {
+        Alert.alert("Entrar", "Função acionada");
+    }
     return (
         <KeyboardAvoidingView
             style={{ style: 1 }}
@@ -32,7 +36,7 @@ export default function Index() {
                     <View style={styles.form}>
                         <Input placeholder="E-mail" keyboardType="email-address" />
                         <Input placeholder="Senha" secureTextEntry />
-                        <Button label={"Logar"} />
+                        <Button label="Entrar" onPress={handleSignIn} />
                     </View>
                     <Text style={styles.footerText}>
                         Não tem uma conta ?{" "}
